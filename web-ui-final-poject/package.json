@@ -1,0 +1,14 @@
+{
+  "name": "web-ui-final-poject",
+  "version": "1.0.0",
+  "description": "web ui testing for final project using cypress",
+  "main": "index.js",
+  "author": "kelompok 1",
+  "license": "MIT",
+  "dependencies": {
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "cypress": "^12.2.0",
+    "prettier": "^2.8.1"
+  }
+}
