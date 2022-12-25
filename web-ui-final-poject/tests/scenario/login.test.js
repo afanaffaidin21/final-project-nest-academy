@@ -11,7 +11,11 @@ describe("Login Test", () => {
     route.visit(ROUTES.login);
   });
 
-  it("Ensure customer can redirect to credential page when Success Login", () => {
+  it("Verify that the customer is able to successfully log in with valid credentials", () => {
     //test case code in here
+    element.get(loginPage.customerLogin);
+    element.select(loginPage.selectField, loginPage.selectedCustomer);
+    element.get(loginPage.loginButton);
+    assert.shouldContainText(loginPage.successLogin, " Welcome ");
   });
 });
