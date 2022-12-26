@@ -23,4 +23,18 @@ describe("Withdrawl Test", () => {
     element.get(withdrawlPage.withdrawlSubmitButton);
     assert.shouldContainText(withdrawlPage.withdrawlMessage, "Transaction successful");
   });
+
+  it("Verify that the customer is unable to make withdrawls more then the balance", () => {
+    //test case code in here
+    element.get(loginPage.customerLogin);
+    element.select(loginPage.selectField, login.VALID_LOGIN_DATA.selectedCustomer1);
+    element.get(loginPage.loginButton);
+    element.get(withdrawlPage.withdrawlButton);
+    element.fillfield(withdrawlPage.withdrawlField, withdrawl.INVALID_WITHDRAWL_DATA.nominal);
+    element.get(withdrawlPage.withdrawlSubmitButton);
+    assert.shouldContainText(
+      withdrawlPage.withdrawlMessage,
+      "Transaction Failed. You can not withdraw amount more than the balance."
+    );
+  });
 });
