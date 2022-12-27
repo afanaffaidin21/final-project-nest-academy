@@ -1,3 +1,3 @@
 export const VALID_LOGIN_DATA = {
-  username: ""
+  selectedCustomer1: "Hermoine Granger"
 };
