@@ -4,6 +4,7 @@ import * as route from "@helper/route";
 import { ROUTES } from "@tests/const/routes";
 import * as login from "@tests/data/login.data";
 import * as loginPage from "@tests/page/login.page";
+import * as addCustomerPage from "@tests/page/addCustomer.page";
 
 describe("Login Test", () => {
   beforeEach(() => {
@@ -43,5 +44,18 @@ describe("Login Test", () => {
     element.get(loginPage.loginButton);
     element.get(loginPage.homeButton);
     assert.shouldContainText(loginPage.customerLogin, "Customer Login");
+  });
+
+  it("Verify that the bank manager is able to successfully login", () => {
+    //test case code in here
+    element.get(loginPage.bankManagerLogin);
+    assert.shouldContainText(addCustomerPage.addCustomerButton, "Add Customer");
+  });
+
+  it("Verify that the bank manager is able to log out of the application from home button", () => {
+    //test case code in here
+    element.get(loginPage.bankManagerLogin);
+    element.get(loginPage.homeButton);
+    assert.shouldContainText(loginPage.bankManagerLogin, "Bank Manager Login");
   });
 });

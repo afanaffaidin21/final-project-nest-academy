@@ -6,3 +6,4 @@ export const logoutButton = ".logout";
 export const customerNameLabel = "label";
 export const homeButton = ".home";
 export const infoAccount = ".borderM > :nth-child(3)";
+export const bankManagerLogin = ".borderM > :nth-child(3) > .btn";
