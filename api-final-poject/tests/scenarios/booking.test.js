@@ -20,7 +20,7 @@ describe("Booking", () => {
   it("Verify that the POST /booking endpoint creates a new booking as expected, with the appropriate request body and response status code", async () => {
     const response = await RestfulApi.CreateBooking(data.VALID_BOOKING_DATA);
 
-    assert.equal(response.status, 500);
+    assert.equal(response.status, 200);
     // assert.containsAllKeys(response.data, ["firstname"]);
     // assert.equal(response.data.successful, data.VALID_BOOKING_DATA.successful);
   });
