@@ -46,4 +46,31 @@ describe("Customer History", () => {
 
     assert.shouldNotHaveValue(historyPage.tdFirstName1, "Hermoine");
   });
+
+  it("Verify that the bank manager is able to filter customer history based on first-name", () => {
+    //test case code in here
+    element.get(loginPage.bankManagerLogin);
+    element.get(historyPage.customerHistoryButton);
+    element.forceGet(historyPage.firstNameFilter);
+
+    assert.shouldContainText(historyPage.resultFirstNameFilter, "Ron");
+  });
+
+  it("Verify that the bank manager is able to filter customer history based on last-name", () => {
+    //test case code in here
+    element.get(loginPage.bankManagerLogin);
+    element.get(historyPage.customerHistoryButton);
+    element.forceGet(historyPage.lastNameFilter);
+
+    assert.shouldContainText(historyPage.resultLastNameFilter, "Weasly");
+  });
+
+  it.only("Verify that the bank manager is able to filter customer history based on post-code", () => {
+    //test case code in here
+    element.get(loginPage.bankManagerLogin);
+    element.get(historyPage.customerHistoryButton);
+    element.forceGet(historyPage.postCodeFilter);
+
+    assert.shouldContainText(historyPage.resultPostCodeFilter, "E89898");
+  });
 });

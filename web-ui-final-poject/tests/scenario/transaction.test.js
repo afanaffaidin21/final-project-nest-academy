@@ -28,5 +28,6 @@ describe("Transaction History Test", () => {
     element.get(loginPage.loginButton);
     element.get(transactionPage.transactionButton);
     element.forceGet(transactionPage.dateTimeButton);
+    assert.shouldContainText(transactionPage.filterResult, "Jul 28, 2015 12:00:00 AM");
   });
 });
