@@ -16,7 +16,6 @@ describe("Create Token", () => {
 
     assert.equal(response.status, 200);
     assert.containsAllKeys(response.data, ["reason"]);
-    // assert.isString(response.data.error);
     assert.equal(response.data.error, data.ERROR_INVALID_LOGIN.error);
   });
 
@@ -25,7 +24,6 @@ describe("Create Token", () => {
 
     assert.equal(response.status, 200);
     assert.containsAllKeys(response.data, ["reason"]);
-    // assert.isString(response.data.error);
     assert.equal(response.data.error, data.ERROR_INVALID_LOGIN.error);
   });
 
@@ -34,7 +32,6 @@ describe("Create Token", () => {
 
     assert.equal(response.status, 200);
     assert.containsAllKeys(response.data, ["reason"]);
-    // assert.isString(response.data.error);
     assert.equal(response.data.error, data.ERROR_INVALID_LOGIN.error);
   });
 });

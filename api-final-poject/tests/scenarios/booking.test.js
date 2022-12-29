@@ -21,7 +21,5 @@ describe("Booking", () => {
     const response = await RestfulApi.CreateBooking(data.VALID_BOOKING_DATA);
 
     assert.equal(response.status, 200);
-    // assert.containsAllKeys(response.data, ["firstname"]);
-    // assert.equal(response.data.successful, data.VALID_BOOKING_DATA.successful);
   });
 });
