@@ -65,7 +65,7 @@ describe("Customer History", () => {
     assert.shouldContainText(historyPage.resultLastNameFilter, "Weasly");
   });
 
-  it.only("Verify that the bank manager is able to filter customer history based on post-code", () => {
+  it("Verify that the bank manager is able to filter customer history based on post-code", () => {
     //test case code in here
     element.get(loginPage.bankManagerLogin);
     element.get(historyPage.customerHistoryButton);
